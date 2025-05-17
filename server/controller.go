@@ -308,7 +308,10 @@ func (controller *Controller) IngestCall(call *Call) {
 
 	} else {
 		logError(err)
+		return
 	}
+
+	TranscribeCall(call);
 }
 
 func (controller *Controller) LogClientsCount() {
